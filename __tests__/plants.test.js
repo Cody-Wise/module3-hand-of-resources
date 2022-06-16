@@ -56,7 +56,7 @@ describe('plant routes', () => {
     expect(resp.body.name).toEqual('Monstera');
   });
 
-  it('DELETE /plants/:id should delete a reptile', async () => {
+  it('DELETE /plants/:id should delete a specifc plant', async () => {
     const resp = await request(app).delete('/plants/2');
     expect(resp.status).toEqual(200);
 
