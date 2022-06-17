@@ -22,6 +22,9 @@
           </tr>
         </thead>
         <tbody class="table-row-group">
+          <td>
+            <strong><h3>Plants Resource</h3></strong>
+          </td>
           <tr class="border-2">
             <td class="table-cell p-3"><pre>/plants</pre></td>
             <td class="table-cell p-3 text-center">GET</td>
@@ -43,46 +46,252 @@
             </td>
           </tr>
           <tr class="border-2">
-            <td class="table-cell p-3"><pre>/plants</pre></td>
+            <td class="table-cell p-3"><pre>/plants/</pre></td>
             <td class="table-cell p-3 text-center">POST</td>
             <td class="table-cell p-3">Adds a plant.</td>
-            <td class="table-cell p-3"></td>
+            <td class="table-cell p-3">
+              curl -d '{"name": "Succulent", "scientific_name": "Succulent"}' -H
+              'Content-Type: application/json'
+              'https://module3-hand-of-resources.herokuapp.com/plants'
+            </td>
           </tr>
           <tr class="border-2">
-            <td class="table-cell p-3"><pre>/authors</pre></td>
-            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3"><pre>/plants/2</pre></td>
+            <td class="table-cell p-3 text-center">PUT</td>
+            <td class="table-cell p-3">Updates a plant.</td>
             <td class="table-cell p-3">
-              Returns a list of all Authors in the store.
+              curl -X PUT -H "Content-Type: application/json" -d
+              '{"name":"Monstera"}'
+              https://module3-hand-of-resources.herokuapp.com/plants/2
             </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/plants/2</pre></td>
+            <td class="table-cell p-3 text-center">DELETE</td>
+            <td class="table-cell p-3">DELETES a plant.</td>
             <td class="table-cell p-3">
-              <a href="/authors" target="_blank" class="text-blue-700"
-                >List Authors</a
+              curl -X DELETE
+              https://module3-hand-of-resources.herokuapp.com/plants/2 -H
+              "Accept: application/json"
+            </td>
+          </tr>
+          <td>
+            <strong><h3>Fishing Gear Resource</h3></strong>
+          </td>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/fishing-gear</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a list of all fishing-gear.</td>
+            <td class="table-cell p-3">
+              <a href="/fishing-gear" target="_blank" class="text-blue-700"
+                >List fishing-gear</a
               >
             </td>
           </tr>
           <tr class="border-2">
-            <td class="table-cell p-3"><pre>/authors/1</pre></td>
+            <td class="table-cell p-3"><pre>/fishing-gear/1</pre></td>
             <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a piece of gear.</td>
             <td class="table-cell p-3">
-              Returns a list of a specific author with book nested.
-            </td>
-            <td class="table-cell p-3">
-              <a href="/authors/1" target="_blank" class="text-blue-700"
-                >List Author</a
+              <a href="/fishing-gear/1" target="_blank" class="text-blue-700"
+                >List Gear</a
               >
             </td>
           </tr>
           <tr class="border-2">
-            <td class="table-cell p-3"><pre>/books</pre></td>
+            <td class="table-cell p-3"><pre>/fishing-gear/</pre></td>
             <td class="table-cell p-3 text-center">POST</td>
-            <td class="table-cell p-3">Adds a new book</td>
-            <td class="table-cell p-3"></td>
+            <td class="table-cell p-3">Adds a piece of gear.</td>
+            <td class="table-cell p-3">
+              curl -d '{"item_name": "Fishing Net", "price": 8}' -H
+              'Content-Type: application/json'
+              'https://module3-hand-of-resources.herokuapp.com/fishing-gear'
+            </td>
           </tr>
           <tr class="border-2">
-            <td class="table-cell p-3"><pre>/authors</pre></td>
+            <td class="table-cell p-3"><pre>/fishing-gear/2</pre></td>
+            <td class="table-cell p-3 text-center">PUT</td>
+            <td class="table-cell p-3">
+              Updates a the name of a piece of gear.
+            </td>
+            <td class="table-cell p-3">
+              curl -X PUT -H "Content-Type: application/json" -d
+              '{"item_name":"Dynamo Fishing Line"}'
+              https://module3-hand-of-resources.herokuapp.com/fishing-gear/2
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/fishing-gear/2</pre></td>
+            <td class="table-cell p-3 text-center">DELETE</td>
+            <td class="table-cell p-3">DELETES a piece of gear.</td>
+            <td class="table-cell p-3">
+              curl -X DELETE
+              https://module3-hand-of-resources.herokuapp.com/fishing-gear/2 -H
+              "Accept: application/json"
+            </td>
+          </tr>
+          <td>
+            <strong><h3>Star Trek Resource</h3></strong>
+          </td>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/star-trek</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Gets a list of all Star Trek characters.
+            </td>
+            <td class="table-cell p-3">
+              <a href="/star-trek" target="_blank" class="text-blue-700"
+                >List Star Trek characters</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/star-trek/1</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a character.</td>
+            <td class="table-cell p-3">
+              <a href="/star-trek/1" target="_blank" class="text-blue-700"
+                >List Character</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/star-trek/</pre></td>
             <td class="table-cell p-3 text-center">POST</td>
-            <td class="table-cell p-3">Adds a new author</td>
-            <td class="table-cell p-3"></td>
+            <td class="table-cell p-3">Adds a new character.</td>
+            <td class="table-cell p-3">
+              curl -d '{"first_name": "Leonard", "last_name": "McCoy", "series":
+              "Star Trek Into The Darkness" }' -H 'Content-Type:
+              application/json'
+              'https://module3-hand-of-resources.herokuapp.com/star-trek'
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/star-trek/2</pre></td>
+            <td class="table-cell p-3 text-center">PUT</td>
+            <td class="table-cell p-3">Updates a character.</td>
+            <td class="table-cell p-3">
+              curl -X PUT -H "Content-Type: application/json" -d
+              '{"first_name":"James", last_name:"Kirk", series":"Star Trek Into
+              The Darkness"}'
+              https://module3-hand-of-resources.herokuapp.com/star-trek/2
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/star-trek/2</pre></td>
+            <td class="table-cell p-3 text-center">DELETE</td>
+            <td class="table-cell p-3">DELETES a character.</td>
+            <td class="table-cell p-3">
+              curl -X DELETE
+              https://module3-hand-of-resources.herokuapp.com/star-trek/2 -H
+              "Accept: application/json"
+            </td>
+          </tr>
+          <td>
+            <strong><h3>Beauty Supplies Resource</h3></strong>
+          </td>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/beauty-supplies</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a list of all beauty supplies.</td>
+            <td class="table-cell p-3">
+              <a href="/beauty-supplies" target="_blank" class="text-blue-700"
+                >List Beauty Supplies</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/beauty-supplies/1</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a beauty supply item.</td>
+            <td class="table-cell p-3">
+              <a href="/beauty-supplies/1" target="_blank" class="text-blue-700"
+                >List Beauty Supply</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/beauty-supplies/</pre></td>
+            <td class="table-cell p-3 text-center">POST</td>
+            <td class="table-cell p-3">Adds a beauty supply item.</td>
+            <td class="table-cell p-3">
+              curl -d '{"item_name": "Foundation", "price": 7}' -H
+              'Content-Type: application/json'
+              'https://module3-hand-of-resources.herokuapp.com/beauty-supplies'
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/beauty-supplies/2</pre></td>
+            <td class="table-cell p-3 text-center">PUT</td>
+            <td class="table-cell p-3">Updates a beauty supply item.</td>
+            <td class="table-cell p-3">
+              curl -X PUT -H "Content-Type: application/json" -d
+              '{"item_name":"Shiny Lip Gloss"}'
+              https://module3-hand-of-resources.herokuapp.com/beauty-supplies/2
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/beauty-supplies/2</pre></td>
+            <td class="table-cell p-3 text-center">DELETE</td>
+            <td class="table-cell p-3">DELETES a beauty supply item.</td>
+            <td class="table-cell p-3">
+              curl -X DELETE
+              https://module3-hand-of-resources.herokuapp.com/beauty-supplies/2
+              -H "Accept: application/json"
+            </td>
+          </tr>
+          <td>
+            <strong><h3>Nintendo Games Resource</h3></strong>
+          </td>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/nintendo-games</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a list of all nintendo games.</td>
+            <td class="table-cell p-3">
+              <a href="/nintendo-games" target="_blank" class="text-blue-700"
+                >List Nintendo Games</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/nintendo-games/1</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a nintendo game.</td>
+            <td class="table-cell p-3">
+              <a href="/nintendo-games/1" target="_blank" class="text-blue-700"
+                >List Game</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/nintendo-games/</pre></td>
+            <td class="table-cell p-3 text-center">POST</td>
+            <td class="table-cell p-3">Adds a game.</td>
+            <td class="table-cell p-3">
+              curl -d '{"item_name": "Super Mario Bros 2", "price": 59}' -H
+              'Content-Type: application/json'
+              'https://module3-hand-of-resources.herokuapp.com/nintendo-games'
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/nintendo-games/2</pre></td>
+            <td class="table-cell p-3 text-center">PUT</td>
+            <td class="table-cell p-3">Updates a game.</td>
+            <td class="table-cell p-3">
+              curl -X PUT -H "Content-Type: application/json" -d
+              '{"item_name":"Mario Bros 3"}'
+              https://module3-hand-of-resources.herokuapp.com/nintendo-games/2
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/nintendo-games/2</pre></td>
+            <td class="table-cell p-3 text-center">DELETE</td>
+            <td class="table-cell p-3">DELETES a game.</td>
+            <td class="table-cell p-3">
+              curl -X DELETE
+              https://module3-hand-of-resources.herokuapp.com/nintendo-games/2
+              -H "Accept: application/json"
+            </td>
           </tr>
         </tbody>
       </table>

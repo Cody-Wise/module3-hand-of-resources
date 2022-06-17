@@ -51,9 +51,9 @@ describe('nintendo game routes', () => {
   it('PUT /nintendo/:id should update specific nintendo game item', async () => {
     const resp = await request(app)
       .put('/nintendo-games/2')
-      .send({ item_name: 'Super Mario Bros 3' });
+      .send({ item_name: 'Mario Bros 3' });
     expect(resp.status).toEqual(200);
-    expect(resp.body.item_name).toEqual('Super Mario Bros 3');
+    expect(resp.body.item_name).toEqual('Mario Bros 3');
   });
   it('DELETE /nintendo/:id should delete specific nintendo game item', async () => {
     const resp = await request(app).delete('/nintendo-games/1');
