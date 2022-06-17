@@ -8,6 +8,8 @@ DROP TABLE IF EXISTS star_trek;
 
 DROP TABLE IF EXISTS beauty_supplies;
 
+DROP TABLE IF EXISTS nintendo_games;
+
 CREATE TABLE plants (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR,
@@ -28,6 +30,12 @@ CREATE TABLE star_trek (
 );
 
     CREATE TABLE beauty_supplies (
+        id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+        item_name VARCHAR,
+        price INT
+    );
+
+    CREATE TABLE nintendo_games (
         id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         item_name VARCHAR,
         price INT
@@ -60,3 +68,10 @@ VALUES
 ('Lipstick', 10),
 ('Lip Gloss', 5),
 ('Lip Balm', 5);
+
+INSERT INTO nintendo_games (item_name, price)
+
+ VALUES
+('Super Mario Bros', 56),
+('Super Mario Bros 3', 54),
+('Metroid', 49);
