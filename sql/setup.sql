@@ -6,6 +6,8 @@ DROP TABLE IF EXISTS fishing_gear;
 
 DROP TABLE IF EXISTS star_trek;
 
+DROP TABLE IF EXISTS beauty_supplies;
+
 CREATE TABLE plants (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR,
@@ -24,6 +26,12 @@ CREATE TABLE star_trek (
     last_name VARCHAR,
     series VARCHAR
 );
+
+    CREATE TABLE beauty_supplies (
+        id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+        item_name VARCHAR,
+        price INT
+    );
 
 INSERT INTO plants (name, scientific_name) 
 
@@ -45,3 +53,10 @@ VALUES
 ('James', 'Tiberius', 'The Next Generation'),
 ('Jean-Luc', 'Picard', 'The Next Generation'),
 ('Miles', 'O''brien', 'Deep Space Nine');
+
+INSERT INTO beauty_supplies (item_name, price)
+
+VALUES
+('Lipstick', 10),
+('Lip Gloss', 5),
+('Lip Balm', 5);
