@@ -4,6 +4,8 @@ DROP TABLE IF EXISTS plants;
 
 DROP TABLE IF EXISTS fishing_gear;
 
+DROP TABLE IF EXISTS star_trek;
+
 CREATE TABLE plants (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR,
@@ -14,6 +16,13 @@ CREATE TABLE fishing_gear (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     item_name VARCHAR,
     price INT
+);
+
+CREATE TABLE star_trek (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    first_name VARCHAR,
+    last_name VARCHAR,
+    series VARCHAR
 );
 
 INSERT INTO plants (name, scientific_name) 
@@ -29,3 +38,10 @@ VALUES
 ('Fishing Rod', 10),
 ('Fishing Line', 5),
 ('Fishing Hooks', 5);
+
+INSERT INTO star_trek (first_name, last_name, series)
+
+VALUES
+('James', 'Tiberius', 'The Next Generation'),
+('Jean-Luc', 'Picard', 'The Next Generation'),
+('Miles', 'O''brien', 'Deep Space Nine');
